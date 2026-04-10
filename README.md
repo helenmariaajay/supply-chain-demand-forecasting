@@ -54,7 +54,41 @@ Built a machine learning model to forecast retail demand and analyze supply chai
 - R² Score: ~0.97
 
 ---
+## SQL Analysis
 
+### Top Performing Stores
+```sql
+SELECT Store, SUM(Weekly_Sales) AS total_sales
+FROM sales
+GROUP BY Store
+ORDER BY total_sales DESC
+LIMIT 5;
+```
+### Monthly Sales Trend
+```sql
+SELECT 
+    strftime('%m', date) AS month,
+    SUM(weekly_sales) AS total_sales
+FROM sales
+GROUP BY month
+ORDER BY month;
+```
+### Holiday vs Non-Holiday Sales
+```sql
+SELECT 
+    isholiday,
+    AVG(weekly_sales) AS avg_sales
+FROM sales
+GROUP BY isholiday;
+```
+---
+
+## SQL Insights
+- Store 20 has the highest total sales
+- Sales peak in July, indicating strong seasonality
+- Holiday periods show higher average sales, indicating demand spikes
+
+---
 ## Business Impact
 - Helps predict demand accurately
 - Reduces stockouts during peak periods
