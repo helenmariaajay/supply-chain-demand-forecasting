@@ -30,6 +30,7 @@ Built a machine learning model to forecast retail demand and analyze supply chai
 - Sales peak mid-year (seasonality present)
 - Holiday periods show higher demand
 - Demand patterns vary across stores/departments
+- Used time-based train-test split to avoid data leakage and ensure realistic forecasting
 
 ---
 ## Visualizations
@@ -64,6 +65,15 @@ Built a machine learning model to forecast retail demand and analyze supply chai
 ## Files
 - `analysis.ipynb` → full code
 - `model.pkl` → trained model
+- `model.pkl` → saved trained model for reuse without retraining
+
+---
+## How to Run
+
+1. Open `analysis.ipynb` in Google Colab or Jupyter Notebook  
+2. Install required libraries:
+   pip install pandas numpy scikit-learn matplotlib  
+3. Run all cells to reproduce results  
 
 ---
 
