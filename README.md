@@ -32,6 +32,15 @@ Built a machine learning model to forecast retail demand and analyze supply chai
 - Demand patterns vary across stores/departments
 
 ---
+## Visualizations
+
+### Monthly Sales Trend
+![Sales Trend](sales_trend.png)
+
+### Holiday vs Non-Holiday Sales
+![Holiday Analysis](holiday_analysis.png)
+
+---
 
 ## Model
 - Random Forest Regressor
